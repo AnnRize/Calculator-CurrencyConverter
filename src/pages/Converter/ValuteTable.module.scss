@@ -1,0 +1,25 @@
+.table {
+   margin: 0px auto;
+   max-width: 90vw;
+   border-collapse: collapse;
+   background: rgb(42, 0, 52);
+
+   > caption {
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: 3rem;
+   }
+
+   > thead {
+      border-bottom: 5px solid rgb(208, 0, 255);
+      text-align: center;
+
+      > tr {
+         > th {
+            border: 2px solid rgb(208, 0, 255);
+            font-size: 1.4rem;
+            padding: 10px;
+         }
+      }
+   }
+}
