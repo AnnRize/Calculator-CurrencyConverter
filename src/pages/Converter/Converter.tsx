@@ -58,10 +58,6 @@ export const Converter = () => {
   return (
     <div className={style.container}>
       <div className={style.converter}>
-        {/* <strong>
-          Чтобы подсчитать в рублях, выберите две одинаковые валюты!!!
-        </strong> */}
-
         <div className={style.valutes}>
           <label htmlFor="from">From: </label>
           <select
