@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import "./Calculator.scss";
 
 export const Calculator = () => {
@@ -15,9 +15,8 @@ export const Calculator = () => {
       setPrev(Number(value));
       setSymbol(sym);
       setValue("");
-
       return;
-    } else {
+    } else if (!!prev && !!symbol && !!value) {
       setSymbol(sym);
       setValue("");
 
@@ -38,9 +37,6 @@ export const Calculator = () => {
           setPrev(prev / Number(value));
           setValue("");
           break;
-
-        default:
-          break;
       }
     }
   };
@@ -48,13 +44,11 @@ export const Calculator = () => {
   const result = () => {
     if (prev === undefined) {
       reset();
-
       return;
     }
     if (symbol && value === "") {
       setValue(`${prev}`);
       setSymbol("");
-
       return;
     }
 
@@ -75,11 +69,7 @@ export const Calculator = () => {
         setPrev(prev / Number(value));
         setValue((e) => `${prev / Number(e)}`);
         break;
-
-      default:
-        break;
     }
-
     setSymbol("");
     setPrev(undefined);
   };
