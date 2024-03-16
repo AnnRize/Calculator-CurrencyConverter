@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import "./Calculator.scss";
 
 export const Calculator = () => {
@@ -31,7 +31,6 @@ export const Calculator = () => {
           setValue("");
           break;
         case "*":
-          console.log("mul");
           setPrev(prev * Number(value));
           setValue("");
           break;
@@ -90,11 +89,6 @@ export const Calculator = () => {
     setSymbol("");
     setPrev(undefined);
   };
-
-  useEffect(() => {
-    console.log("prev = " + prev);
-    console.log("value = " + value);
-  }, [prev, value]);
 
   return (
     <div className="container">

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { ValuteTable } from "./ValuteTable";
 import { Options } from "./Options";
@@ -48,12 +48,6 @@ export const Converter = () => {
       setResult((value * from) / to);
     }
   };
-
-  useEffect(() => {
-    console.log("value " + value);
-    console.log("from " + from);
-    console.log("to " + to);
-  }, [value, from, to]);
 
   return (
     <div className={style.container}>
