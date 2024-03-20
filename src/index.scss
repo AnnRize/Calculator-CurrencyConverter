@@ -1,13 +1,20 @@
+:root {
+   --background: rgb(30, 30, 30);
+   --border: 2px solid white;
+   --t-border: 5px solid white;
+   --color: rgb(255, 255, 255);
+}
+
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   color: rgb(0, 255, 255);
+   color: var(--color);
 }
 
 body {
    min-height: 100vh;
-   background: rgb(56, 0, 61);
+   background: var(--background);
 }
 
 a {

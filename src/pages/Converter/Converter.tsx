@@ -73,7 +73,7 @@ export const Converter = () => {
           </select>
         </div>
 
-        <div className={style.result}>Результат: {result?.toFixed(6)}</div>
+        <div className={style.result}>Результат: {result?.toFixed(2)}</div>
         <div className={style.convert}>
           <input
             placeholder="Значение"

@@ -10,7 +10,7 @@ interface ValuteTableProps {
 
 export const ValuteTable = memo(({ data }: ValuteTableProps) => {
   return (
-    <div>
+    <div className={style.tables_container}>
       <table className={style.table}>
         <caption>Популярные валюты</caption>
         <thead>

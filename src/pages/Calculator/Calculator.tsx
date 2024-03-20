@@ -49,6 +49,7 @@ export const Calculator = () => {
     if (symbol && value === "") {
       setValue(`${prev}`);
       setSymbol("");
+      setPrev(undefined);
       return;
     }
 

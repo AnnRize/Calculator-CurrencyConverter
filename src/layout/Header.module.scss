@@ -1,8 +1,8 @@
 .header {
    height: 80px;
    padding: 20px;
-   border-bottom: 2px solid rgb(208, 0, 255);
-   background: rgb(56, 0, 61);
+   border-bottom: var(--border);
+   background: var(--background);
    display: flex;
    justify-content: space-around;
 
@@ -24,13 +24,13 @@
             padding: 0px 10px 5px;
 
             &:hover {
-               background: white;
-               color: rgb(208, 0, 255);
+               background: var(--color);
+               color: var(--background);
             }
          }
          .active {
-            background: white;
-            color: rgb(208, 0, 255);
+            background: var(--color);
+            color: var(--background);
          }
       }
    }

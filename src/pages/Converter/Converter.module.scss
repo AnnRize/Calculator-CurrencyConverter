@@ -1,5 +1,8 @@
 .container {
    padding: 100px 0;
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
 
    .converter {
       display: flex;
@@ -8,23 +11,15 @@
       margin: 0 auto;
       color: black;
 
-      // strong {
-      //    text-align: center;
-      //    font-size: 1.5rem;
-      //    color: red;
-      //    margin-bottom: 20px;
-      // }
-
       .valutes {
          display: flex;
          justify-content: center;
+         gap: 20px;
          align-items: center;
          font-size: 1.4rem;
 
-         label {
-         }
-
          select {
+            border: none;
             padding: 10px 20px;
             color: black;
             font-size: 1.2rem;
@@ -50,21 +45,21 @@
             font-size: 1.2rem;
             color: black;
             margin-right: 20px;
+            border: none;
          }
 
          .convert_button {
-            color: rgb(0, 255, 255);
             border-radius: 20px;
-            border: 2px solid rgb(208, 0, 255);
-            background: rgb(42, 0, 52);
+            border: var(--border);
+            background: var(--background);
             padding: 10px 20px;
             font-size: 1.2rem;
             transition: 0.2s ease-in-out;
 
             &:hover {
                cursor: pointer;
-               background: white;
-               color: rgb(208, 0, 255);
+               background: var(--color);
+               color: var(--background);
             }
          }
       }
