@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import style from "./Header.module.scss";
 
 const activePage = ({ isActive }: { isActive: boolean }) => {
@@ -6,6 +6,7 @@ const activePage = ({ isActive }: { isActive: boolean }) => {
 };
 
 export const Header = () => {
+  const location = useLocation();
   return (
     <div className={style.header}>
       <nav className={style.navbar}>
@@ -13,7 +14,12 @@ export const Header = () => {
           <li>
             <NavLink
               to={import.meta.env.PROD ? "/Calculator-CurrencyConverter/" : "/"}
-              className={activePage}
+              className={activePage({
+                isActive:
+                  location.pathname === "/Calculator-CurrencyConverter/"
+                    ? true
+                    : false,
+              })}
             >
               Калькулятор
             </NavLink>
