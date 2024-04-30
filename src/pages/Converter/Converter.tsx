@@ -77,7 +77,12 @@ export const Converter = () => {
         <div className={style.convert}>
           <input
             placeholder="Значение"
-            type="number"
+            type="text"
+            onKeyDown={(e) => {
+              if (e.code.includes(`Key`)) {
+                e.preventDefault();
+              }
+            }}
             onChange={(e) => {
               setValue(Number(e.target.value));
             }}

@@ -11,12 +11,15 @@ export const Header = () => {
       <nav className={style.navbar}>
         <ul>
           <li>
-            <NavLink to={"/"} className={activePage}>
+            <NavLink
+              to={import.meta.env.PROD ? "/Calculator-CurrencyConverter/" : "/"}
+              className={activePage}
+            >
               Калькулятор
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/converter"} className={activePage}>
+            <NavLink to={"converter"} className={activePage}>
               Конвертер
             </NavLink>
           </li>

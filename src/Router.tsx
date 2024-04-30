@@ -6,7 +6,7 @@ export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />} path="/">
+        <Route element={<Layout />} path={import.meta.env.PROD ? "/Calculator-CurrencyConverter/" : "/"}>
           <Route index element={<Calculator />} />
           <Route path="converter" element={<Converter />} />
         </Route>
